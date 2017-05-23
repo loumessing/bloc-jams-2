@@ -31,7 +31,7 @@ var albumTheBooks = {
   artist: 'The Books',
   label: 'Temporary Residence',
   year: '2016',
-  albutArtUrl: 'assets/images/album_covers/22.png',
+  albumArtUrl: 'assets/images/album_covers/22.png',
   songs:[
     {title: 'The Lemon of Pink', duration: '4:40'},
     {title: 'The Lemon of Pink II', duration: '1:35'},
@@ -77,7 +77,7 @@ var setCurrentAlbum = function(album) {
     albumSongList.innerHTML = ''
 
     for (var i = 0; i < album.songs.length; i++) {
-        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].name, album.songs[i].length)
+        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration)
     }
 }
 
@@ -95,11 +95,3 @@ window.onload = function() {
     })
 
   }
-
-///*  window.addEventListener('click', function(setCurrentAlbum)) {
-//     var albumCover = {}
-//     for (var i=0; i<setCurrentAlbum.length; i++)
-//      var currentAlbum = setCurrentAlbum[i]
-//      if (albumCover[currentAlbum]) {
-//    } else {
-//    albumCover[currentAlbum]=1*/
