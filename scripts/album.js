@@ -26,12 +26,12 @@ var albumMarconi = {
         { title: 'Wrong phone number', duration: '2:15'}
     ]
 }
-var albumtheBooks = {
+var albumTheBooks = {
   title: 'The Lemon of Pink',
   artist: 'The Books',
   label: 'Temporary Residence',
   year: '2016',
-  albutArtUrl: 'assets/images/album_covers/22LOP.png',
+  albutArtUrl: 'assets/images/album_covers/22.png',
   songs:[
     {title: 'The Lemon of Pink', duration: '4:40'},
     {title: 'The Lemon of Pink II', duration: '1:35'},
@@ -60,12 +60,14 @@ var createSongRow = function(songNumber, songName, songLength) {
 
     return template
 }
+var albumTitle = document.getElementsByClassName('album-view-title')[0]
+var albumArtist = document.getElementsByClassName('album-view-artist')[0]
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0]
+var albumImage = document.getElementsByClassName('album-cover-art')[0]
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0]
+
 var setCurrentAlbum = function(album) {
-    var albumTitle = document.getElementsByClassName('album-view-title')[0]
-    var albumArtist = document.getElementsByClassName('album-view-artist')[0]
-    var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0]
-    var albumImage = document.getElementsByClassName('album-cover-art')[0]
-    var albumSongList = document.getElementsByClassName('album-view-song-list')[0]
+
 
     albumTitle.firstChild.nodeValue = album.title
     albumArtist.firstChild.nodeValue = album.artist
@@ -75,22 +77,29 @@ var setCurrentAlbum = function(album) {
     albumSongList.innerHTML = ''
 
     for (var i = 0; i < album.songs.length; i++) {
-        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration)
+        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].name, album.songs[i].length)
     }
 }
 
 window.onload = function() {
-  window.addEventListener('click', function(setCurrentAlbum)) {
-     var albumCover = {}
-     for (var i=0; i<setCurrentAlbum.length; i++)
-      var currentAlbum = setCurrentAlbum[i]
-      if (albumCover[currentAlbum]) {
-        albumCover[currentAlbum]++
-    } else {
-    albumCover[currentAlbum]=1
-  }
- }
-
-
     setCurrentAlbum(albumPicasso)
-}
+
+    var albums = [albumPicasso, albumMarconi, albumTheBooks]
+    var index = 1
+    albumImage.addEventListener("click", function(event){
+      setCurrentAlbum(albums[index])
+      index++
+      if (index == albums.length){
+        index = 0
+      }
+    })
+
+  }
+
+///*  window.addEventListener('click', function(setCurrentAlbum)) {
+//     var albumCover = {}
+//     for (var i=0; i<setCurrentAlbum.length; i++)
+//      var currentAlbum = setCurrentAlbum[i]
+//      if (albumCover[currentAlbum]) {
+//    } else {
+//    albumCover[currentAlbum]=1*/
