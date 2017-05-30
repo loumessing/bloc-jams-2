@@ -88,16 +88,16 @@ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></
 window.onload = function() {
     setCurrentAlbum(albumPicasso)
     songListContainer.addEventListener('mouseover', function(event) {
-      if (event.target.parentElement.className === 'albm-view-song-item'){
+      if (event.target.parentElement.className === 'album-view-song-item'){
         event.target.parentElement.querySelector('song-item-number').innerHTML = playButtonTemplate
     }
 })
-  for (var i=o; i<songRows.length; i++){
+  for (var i=0; i < songRows.length; i++){
     songRows[i].addEventListener('mouseleave', function(event){
       this.children[0].innerHTML = this.children[0].getAttribute('data-song-number')
     })
   }
-
+}
     var albums = [albumPicasso, albumMarconi, albumTheBooks]
     var index = 1
     albumImage.addEventListener("click", function(event){
