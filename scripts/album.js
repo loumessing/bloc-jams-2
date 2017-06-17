@@ -97,8 +97,9 @@ var getSongItem = function(element) {
 var clickHandler = function(targetElement){
   var songItem = getSongItem(targetElement)
 
-     if (currentlyPlayingSong === null){
-      songItem.innerHTML = songItem.getAttribute('data-song-number')
+     if (currentlyPlayingSong === null) {
+       songItem.innerHTML = pauseButtonTemplate
+       currentlyPlayingSong = songItem.getAttribute('data-song-number')
 
     } else if (currentlyPlayingSong === songItem.getAttribute('data-song-number')){
       songItem.innerHTML = playButtonTemplate
@@ -140,7 +141,7 @@ window.onload = function() {
      songListContainer.addEventListener('mouseover', function(event) {
        if (event.target.parentElement.className === 'album-view-song-item') {
          event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate
-         var songItem = getSongItem(event.target)
+        // var songItem = getSongItem(event.target)
 
          if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong){
            songItem.innerHTML = playButtonTemplate
