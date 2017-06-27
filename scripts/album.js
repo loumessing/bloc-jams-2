@@ -155,7 +155,7 @@ window.onload = function() {
          }
        }
      })
-
+debugger;
     for (var i = 0; i < songRows.length; i++) {
     songRows[i].addEventListener('mouseleave', function(event) {
       var songItem = getSongItem(event.target)
@@ -171,7 +171,7 @@ window.onload = function() {
     })
   }
 }
-/* var albums = [albumPicasso, albumMarconi, albumTheBooks]
+ var albums = [albumPicasso, albumMarconi, albumTheBooks]
     var index = 1
     albumImage.addEventListener('click', function(event){
       setCurrentAlbum(albums[index])
@@ -179,4 +179,4 @@ window.onload = function() {
       if (index == albums.length){
         index = 0
       }
-    })*/
+    })
