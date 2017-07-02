@@ -48,7 +48,6 @@ var albumTheBooks = {
     {title: 'P.S', duration: '0:56'}
   ]
 
-
 }
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
@@ -60,8 +59,6 @@ var createSongRow = function(songNumber, songName, songLength) {
 
     return template
 }
-
-
 
 var setCurrentAlbum = function(album) {
 
@@ -134,7 +131,6 @@ var clickHandler = function(targetElement){
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0]
 var songRows = document.getElementsByClassName('album-view-song-item')
-
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>'
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>'
