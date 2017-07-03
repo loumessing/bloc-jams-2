@@ -16,11 +16,12 @@ var buildCollectionItemTemplate = function(){
   return $(template)
 }
 
-window.onload = function() {
-  var collectionContainer = document.getElementsByClassName('album-covers')[0]
-  collectionContainer.innerHTML = ''
-  for (var i=0; i<12; i++){
-    collectionContainer.innerHTML += collectionItemTemplate
-  }
+$(window).load(function() {
+  var $collectionContainer = $('.album-covers')
+  $collectionContainer.empty()
 
-}
+  for (var i=0; i<12; i++){
+    var $newThumbnail = buildCollectionItemTemplate()
+    $collectionContainer.append($newThumbnail)
+    }
+})
