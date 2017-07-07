@@ -81,7 +81,6 @@ for (var i = 0; i < album.songs.length; i++) {
   }
 }
 
-
   var findParentByClassName = function(element, targetClass) {
       if (element) {
           var currentParent = element.parentElement
@@ -126,8 +125,6 @@ var clickHandler = function(targetElement){
        }
 
 }
-
-
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0]
 var songRows = document.getElementsByClassName('album-view-song-item')
