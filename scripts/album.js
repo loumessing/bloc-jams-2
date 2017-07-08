@@ -57,8 +57,9 @@ var createSongRow = function(songNumber, songName, songLength) {
      + '  <td class="song-item-duration">' + songLength + '</td>'
      + '</tr>'
 
-    return template
+    return $(template)
 }
+<<<<<<< HEAD
 
 var setCurrentAlbum = function(album) {
 
@@ -79,6 +80,29 @@ for (var i = 0; i < album.songs.length; i++) {
     albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration)
   }
 }
+=======
+var setCurrentAlbum = function(album) {
+
+var $albumTitle = $('.album-view-title')
+var $albumArtist = $('.album-view-artist')
+var $albumReleaseInfo = $('.album-view-release-info')
+var $albumImage = $('.album-cover-art')
+var $albumSongList = $('.album-view-song-list')
+
+$albumTitle.text(album.title)
+$albumArtist.text(album.artist)
+$albumReleaseInfo.text(album.year + ' ' + album.label)
+$albumImage.attr('src', album.albumArtUrl)
+
+$albumSongList.empty()
+
+for (var i = 0; i < album.songs.length; i++) {
+  var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration)
+  $albumSongList.append($newRow)
+  }
+}
+
+>>>>>>> assignment-17
   var findParentByClassName = function(element, targetClass) {
       if (element) {
           var currentParent = element.parentElement
@@ -143,7 +167,7 @@ window.onload = function() {
      songListContainer.addEventListener('mouseover', function(event) {
 
        if (event.target.parentElement.className === 'album-view-song-item') {
-         event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate
+
          var songItem = getSongItem(event.target)
 
          if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong){
@@ -167,6 +191,7 @@ window.onload = function() {
     })
   }
 }
+<<<<<<< HEAD
 //send this to Carrie
 /* var albums = [albumPicasso, albumMarconi, albumTheBooks]
     var index = 1
@@ -177,3 +202,16 @@ window.onload = function() {
         index = 0
       }
     })*/
+=======
+
+//    var albums = [albumPicasso, albumMarconi, albumTheBooks]
+//    var index = 1
+//    albumImage.addEventListener('click', function(event){
+//      setCurrentAlbum(albums[index])
+//      index++
+//      if (index == albums.length){
+//        index = 0
+//    })
+
+//  }
+>>>>>>> assignment-17
