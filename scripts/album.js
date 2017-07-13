@@ -57,7 +57,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      + '  <td class="song-item-duration">' + songLength + '</td>'
      + '</tr>'
 
-     var $row = $(template) 
+     var $row = $(template)
 
      var clickHandler = function() {
          var songNumber = $(this).attr('data-song-number')
@@ -111,8 +111,7 @@ var createSongRow = function(songNumber, songName, songLength) {
 
      $albumSongList.empty()
 
-
-      for (var i = 0  i < album.songs.length i++) {
+      for (var i = 0;  i < album.songs.length; i++) {
           var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration)
           $albumSongList.append($newRow)
       }
@@ -123,7 +122,7 @@ var createSongRow = function(songNumber, songName, songLength) {
 
   var currentlyPlayingSong = null
 
-  $(document).ready(function()) {
+  $(document).ready(function() {
       setCurrentAlbum(albumPicasso)
   })
 //send this to Carrie
