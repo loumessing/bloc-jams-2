@@ -69,6 +69,7 @@ var createSongRow = function(songNumber, songName, songLength) {
          if (currentlyPlayingSong !== songNumber) {
              $(this).html(pauseButtonTemplate)
              currentlyPlayingSong = songNumber
+             
          } else if (currentlyPlayingSong === songNumber) {
              $(this).html(playButtonTemplate)
              currentlyPlayingSong = null
@@ -125,7 +126,7 @@ var createSongRow = function(songNumber, songName, songLength) {
   $(document).ready(function() {
       setCurrentAlbum(albumPicasso)
   })
-  
+
 //send this to Carrie
 /* var albums = [albumPicasso, albumMarconi, albumTheBooks]
     var index = 1
