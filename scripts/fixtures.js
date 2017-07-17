@@ -11,7 +11,7 @@ var albumPicasso = {
         { title: 'Pink', duration: '3:21'},
         { title: 'Magenta', duration: '2:15'}
     ]
-}
+};
 var albumMarconi = {
     title: 'The Telephone',
     artist: 'Guglielmo Marconi',
@@ -25,7 +25,7 @@ var albumMarconi = {
         { title: 'Can you hear me now?', duration: '3:14' },
         { title: 'Wrong phone number', duration: '2:15'}
     ]
-}
+};
 var albumTheBooks = {
   title: 'The Lemon of Pink',
   artist: 'The Books',
@@ -48,4 +48,4 @@ var albumTheBooks = {
     {title: 'P.S', duration: '0:56'}
   ]
 
-}
+};
