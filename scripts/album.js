@@ -166,7 +166,7 @@ $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
-    var albumList = [albumPicasso, albumMarconi, albumTuring];
+    var albumList = [albumPicasso, albumMarconi, albumTheBooks];
     var counter = 1;
     var albumImage = document.getElementsByClassName('album-cover-art')[0];
     albumImage.addEventListener("click", function(event){
