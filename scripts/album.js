@@ -23,6 +23,7 @@ var createSongRow = function(songNumber, songName, songLength) {
     		// Switch from Play -> Pause button to indicate new song is playing.
     		    $(this).html(pauseButtonTemplate);
     		    setSong(songNumber);
+            currentSoundFile.play();
             updateSeekBarWhileSongPlays();
             currentSongFromAlbum = currentAlbum.songs[songNumber -1];
 
@@ -111,7 +112,7 @@ var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
   offsetXPercent = Math.min(100, offsetXPercent);
 
   var percentageString = offsetXPercent +'%';
-  $seekBar.find('.fill').width(persentageString);
+  $seekBar.find('.fill').width(percentageString);
   $seekBar.find('.thumb').css({ left: percentageString });
 };
 
@@ -120,7 +121,7 @@ var setupSeekBars = function() {
 
   $seekBars.click(function(event) {
     var offsetX = event.pageX - $(this).offset().left;
-    var barWidth = $(this).width();
+    var varWidth = $(this).width();
     var seekBarFillRatio = offsetX / varWidth;
 
     if ($(this).parent().attr( 'class' ) == 'seek-control') {
@@ -138,10 +139,10 @@ var setupSeekBars = function() {
 
     $(document).bind('mousemove.thumb', function(event){
       var offsetX = event.pageX - $seekBar.offset().left;
-      var barWidth = $seekBar.width();
-      var seekBarFillRatio = offsetX / barWidth;
+      var varWidth = $seekBar.width();
+      var seekBarFillRatio = offsetX / varWidth;
 
-      if($seekBar.parent().attr( 'class') == 'seek-control'){
+      if($seekBar.parent().attr( 'class' ) == 'seek-control'){
         seek(seekBarFillRatio * currentSoundFile.getDuration());
         }
         else {
@@ -149,7 +150,7 @@ var setupSeekBars = function() {
         }
         updateSeekPercentage($seekBar, seekBarFillRatio);
     });
-    $(document).bind('mouseup.thumb', function() {
+      $(document).bind('mouseup.thumb', function() {
       $(document).unbind('mousemove.thumb');
       $(document).unbind('mouseup.thumb');
       });
@@ -159,7 +160,7 @@ var setupSeekBars = function() {
 
 var trackIndex = function(album, song) {
      return album.songs.indexOf(song);
-}
+};
 
 var setSong = function (songNumber) {
   if (currentSoundFile) {

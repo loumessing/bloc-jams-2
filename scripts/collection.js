@@ -13,15 +13,16 @@ var buildCollectionItemTemplate = function() {
 + '   </p>'
 + '  </div>'
 + '</div>'
-  return $(template)
-}
+;
+  return $(template);
+};
 
 $(window).load(function() {
-  var $collectionContainer = $('.album-covers')
-  $collectionContainer.empty()
+  var $collectionContainer = $('.album-covers');
+  $collectionContainer.empty();
 
   for (var i=0; i<12; i++){
-    var $newThumbnail = buildCollectionItemTemplate()
-    $collectionContainer.append($newThumbnail)
+    var $newThumbnail = buildCollectionItemTemplate();
+    $collectionContainer.append($newThumbnail);
     }
-})
+});
