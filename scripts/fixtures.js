@@ -5,11 +5,12 @@ var albumPicasso = {
     year: '1881',
     albumArtUrl: 'assets/images/album_covers/01.png',
     songs: [
-        { title: 'Blue', duration: '4:26', audioUrl: 'assets/music/bloc_jams_music/blue' },
-        { title: 'Green', duration: '3:14', audioUrl: 'assets/music/bloc_jams_music/green' },
-        { title: 'Red', duration: '5:01', audioUrl: 'assets/music/bloc_jams_music/red' },
-        { title: 'Pink', duration: '3:21', audioUrl: 'assets/music/bloc_jams_music/pink'},
-        { title: 'Magenta', duration: '2:15', audioUrl: 'assets/music/bloc_jams_music/magenta'}
+      //add actual time in seconds instead of strings
+        { title: 'Blue', duration: 161.71, audioUrl: 'assets/music/bloc_jams_music/blue' },
+        { title: 'Green', duration: 103.96, audioUrl: 'assets/music/bloc_jams_music/green' },
+        { title: 'Red', duration: 268.45, audioUrl: 'assets/music/bloc_jams_music/red' },
+        { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/bloc_jams_music/pink'},
+        { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/bloc_jams_music/magenta'}
     ]
 
 };
@@ -36,19 +37,19 @@ var albumTheBooks = {
   year: '2016',
   albumArtUrl: 'assets/images/album_covers/14.png',
   songs:[
-    {title: 'The Lemon of Pink', duration: '4:40', audioUrl: 'assets/music/bloc_jams_music/TheLemonofPinkI'},
-    {title: 'The Lemon of Pink II', duration: '1:35', audioUrl: 'assets/music/bloc_jams_music/The Lemon of Pink II'},
-    {title: 'Tokyo', duration: '3:43', audioUrl: 'assets/music/bloc_jams_music/Tokyo'},
-    {title: 'Bonanza', duration: '0:53', audioUrl: 'assets/music/bloc_jams_music/Bonanza'},
-    {title: 'S Is For EverySing', duration: '3:32', audioUrl: 'assets/music/bloc_jams_music/S is For Evrysing'},
-    {title: 'Explanation Mark', duration: '0:20', audioUrl: 'assets/music/bloc_jams_music/Explanation Mark'},
-    {title: 'There Is No There There', duration: '3:37', audioUrl: 'assets/music/bloc_jams_music/There is No There'},
-    {title: 'Take Time', duration: '3:37', audioUrl: 'assets/music/bloc_jams_music/Take Time'},
-    {title: 'Dont Even Sing About It', duration: '4:10', audioUrl: 'assets/music/bloc_jams_music/Don t Even Sing About It'},
-    {title: 'The Future, Wouldnt That Be Nice', duration: '3:16', audioUrl: 'assets/music/bloc_jams_music/The Future, Wouldn t That Be Nice'},
-    {title: 'A True Story of a Story of True Love', duration:'4:25', audioUrl: 'assets/music/bloc_jams_music/A True Story of a Story of True Love'},
-    {title: 'The Right Aint Right', duration: '2:48', audioUrl: 'assets/music/bloc_jams_music/The Right Ain t Shit'},
-    {title: 'P.S', duration: '0:56', audioUrl: 'assets/music/bloc_jams_music/PS'}
+    {title: 'The Lemon of Pink', duration: 95, audioUrl: 'assets/music/bloc_jams_music/TheLemonofPinkI'},
+    {title: 'The Lemon of Pink II', duration: 95.11, audioUrl: 'assets/music/bloc_jams_music/TheLemonofPinkII'},
+    {title: 'Tokyo', duration: 223.21, audioUrl: 'assets/music/bloc_jams_music/Tokyo'},
+    {title: 'Bonanza', duration: 53, audioUrl: 'assets/music/bloc_jams_music/Bonanza'},
+    {title: 'S Is For EverySing', duration: 212.15, audioUrl: 'assets/music/bloc_jams_music/SisForEvrysing'},
+    {title: 'Explanation Mark', duration: 20, audioUrl: 'assets/music/bloc_jams_music/ExplanationMark'},
+    {title: 'There Is No There There', duration: 317.21, audioUrl: 'assets/music/bloc_jams_music/ThereisNoThere'},
+    {title: 'Take Time', duration: 317.12, audioUrl: 'assets/music/bloc_jams_music/TakeTime'},
+    {title: 'Dont Even Sing About It', duration: 250, audioUrl: 'assets/music/bloc_jams_music/DontEvenSingAboutIt'},
+    {title: 'The Future, Wouldnt That Be Nice', duration: 196, audioUrl: 'assets/music/bloc_jams_music/TheFutureWouldntThatBeNice'},
+    {title: 'A True Story of a Story of True Love', duration:265, audioUrl: 'assets/music/bloc_jams_music/ATrueStoryofaStoryofTrueLove'},
+    {title: 'The Right Aint Right', duration: 168, audioUrl: 'assets/music/bloc_jams_music/ThatRightAintShit'},
+    {title: 'P.S', duration: 56, audioUrl: 'assets/music/bloc_jams_music/PS'}
   ]
 
 
